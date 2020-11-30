@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomsheet_cl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/greyline"
+        android:layout_width="50dp"
+        android:layout_height="5dp"
+        android:backgroundTint="@color/grey"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/myprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Profile"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greyline"
+        tools:ignore="MissingConstraints">
+    </TextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/myimage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/profile1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myprofile"
+        tools:ignore="MissingConstraints">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/myname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Akash Ali"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@+id/myimage"
+        app:layout_constraintTop_toBottomOf="@+id/myprofile"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="16dp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/phoneicon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_phone"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toEndOf="@+id/myimage"
+        app:layout_constraintTop_toBottomOf="@+id/myname"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="16dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/myphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03101010768"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintStart_toEndOf="@+id/phoneicon"
+        app:layout_constraintTop_toBottomOf="@+id/myname"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="4dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/mygender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male, "
+        android:textSize="12sp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toEndOf="@+id/myimage"
+        app:layout_constraintTop_toBottomOf="@+id/phoneicon"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="16dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/myage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male, "
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/mygender"
+        app:layout_constraintTop_toBottomOf="@+id/phoneicon"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/quoteicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="180"
+        android:src="@drawable/ic_quote"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myimage"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="16dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/mybio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="@string/Lorem"
+        android:textSize="12sp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quoteicon"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/myeditprofile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/green"
+        app:cardCornerRadius="20dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/myage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myname"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:src="@drawable/ic_edit"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mybio"
+            tools:ignore="MissingConstraints">
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
